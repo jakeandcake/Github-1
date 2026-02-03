@@ -29,7 +29,7 @@ def numcheck(x):
         try:
             x = int(x)
             return int(x)
-        except:
+        except ValueError:
             x = input("Enter another number: ")
             continue
 def opcheck(user_op):
@@ -50,8 +50,8 @@ def divisionzero(user_op, y):
                 try:
                     y = int(y)
                     break
-                except:
-                    y = input("Enter a valid number")
+                except ValueError:
+                    y = input("Enter a valid number: ")
         else:
             return y
 
@@ -111,3 +111,4 @@ else:
     num1 = divisionzero(op, num1)
 
 results(num0, num1, op)
+
